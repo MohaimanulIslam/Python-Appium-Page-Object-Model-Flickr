@@ -20,6 +20,3 @@ class BaseTest(unittest.TestCase):
 
     def tearDown(self):
         self.driver.quit()
-
-    def test_con(self):
-        pass
