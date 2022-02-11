@@ -13,22 +13,19 @@ class LoginPage(HomePage):
         super(LoginPage, self).__init__(driver)
 
     def click_on_get_started(self):
-        pass
+        self.find_element(*self.locator.GET_STARTED).click()
 
-    def click_on_login(self):
-        self.find_element(*self.locator.LOGIN_BTN).click()
-
-    def set_email(self, email):
-        self.find_element(*self.locator.SET_EMAIL).send_keys(email)
+    def enter_email_add(self, email):
+        self.find_element(*self.locator.ENTER_EMAIL).send_keys(email)
 
     def click_on_next(self):
-        self.find_element(*self.locator.CLICK_EMAIL_XPATH).click()
+        self.find_element(*self.locator.NEXT_BTN).click()
 
     def set_password(self, password):
         time.sleep(3)
-        self.find_element(*self.locator.SET_PASS).send_keys(password)
+        self.find_element(*self.locator.ENTER_PASS).send_keys(password)
 
     def click_sign_in(self):
-        self.find_element(*self.locator.CLICK_SIGNIN_BTN).click()
+        self.find_element(*self.locator.SIGN_IN_BTN).click()
 
 
